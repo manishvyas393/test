@@ -11,7 +11,7 @@ mongoose.connect(process.env.mongo_uri).then(() => {
 }).catch(err => console.log(err))
 app.use(express.json())
 app.use(cookieParser())
-app.use("/", userRoutes)
+app.use("/api", userRoutes)
 app.listen(PORT, () => {
       console.log(`server running on port ${PORT}`)
 })

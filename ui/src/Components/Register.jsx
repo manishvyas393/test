@@ -11,7 +11,7 @@ const Register = () => {
     if (email === "" || name === "" || password === "") {
       alert("please fill all fields");
     } else {
-      const { data } = await axios.post("/new/user", {
+      const { data } = await axios.post("/api/new/user", {
         email,
         name,
         password,

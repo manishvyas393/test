@@ -6,7 +6,7 @@ const Details = ({ user }) => {
   const navigate = useNavigate();
   const logoutHandle = async (e) => {
     e.preventDefault();
-    const { data } = await axios.post("/users/logout");
+    const { data } = await axios.post("/api/users/logout");
     if (data.success) {
       navigate("/");
     }

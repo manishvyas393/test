@@ -9,7 +9,7 @@ const EditProfile = ({ user }) => {
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     if (password === "") {
-      const { data } = await axios.patch("/users/me", {
+      const { data } = await axios.patch("/api/users/me", {
         email,
         name,
       });
@@ -17,10 +17,10 @@ const EditProfile = ({ user }) => {
         navigate("/profile");
       }
     } else {
-      const { data } = await axios.patch("/users/me", {
+      const { data } = await axios.patch("/api/users/me", {
         email,
         name,
-        password
+        password,
       });
       if (data.success) {
         navigate("/profile");
